@@ -1,0 +1,297 @@
+// *{
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+// body{
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// }
+
+// .theme--mode{
+//   background:url("src/assets/light.png") ;
+//   background-size: cover;
+//   min-height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//  &.dark{
+//     background: url("src/assets/dark.jpg");
+//     background-size: cover;
+//   }
+//   .card{
+//     width: 30%;
+//     min-height:40vh ;
+//     background: white;
+//     border-radius:16px ;
+//     box-shadow: 0 0 10px rgba($color:#1d1c1c ,$alpha:1.0);
+//     position: relative;
+//     padding: 10px 10px ;
+//     .discription{
+//       text-align: center;
+//       padding: 1rem;
+//     }
+   
+  
+//     .card-image{
+//       width: 10rem;
+//       height: 10rem;
+//       border-radius: 50%;
+//       border: 2px solid rgba($color: #000000, $alpha: 0.2);
+//       overflow: hidden;
+//       margin: auto;
+    
+//     img{
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+      
+//     }
+
+//     }
+//   }
+//   .mode{
+//     width: 8rem;
+//     height: 30px;
+//     border-radius: 60px;
+//     box-shadow: 0 0 10 rgba($color:#423b3b ,$alpha:0.2);
+//     background: #423b3b;
+//     position: absolute;
+//     right: 2rem;
+//     top: 2rem;
+//     cursor: pointer;
+//     bottom: 0;
+//     .mode-image{
+//       width: 2rem;
+//       height: 100%;
+//       border-radius: 50%;
+//       background:url("src/assets/sun.svg");
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       &.dark{
+//         background: url("src/assets/moon.svg");
+//         background-size: cover;
+//         // right: 2px;
+//        transition: 0.4s ease-in-out;
+//       }
+     
+     
+//     }
+//   }
+// }
+:root {
+	--bg-color: #f0edf1;
+	--text-color: #555;
+	--light-color: #ffffff;
+	--dark-color: #cbced1;
+	--darker-color: #a7aaaf;
+	--white-color: #ffffff;
+	--pink-color: #aa1178;
+	--violet-color: #7008a4;
+	--transition-some: background .3s, box-shadow 0.4s;
+	--transition-all: all 0.4s;
+}
+.dark {
+	--bg-color: #34393e;
+	--text-color: #d3d3d4;
+	--light-color: #41484e;
+	--dark-color: #2e3236;
+	--darker-color: #1c1f22;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	color: var(--text-color);
+}
+.container {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg-color);
+	transition: var(--transition-some);
+}
+.card {
+	width: 430px;
+	height: 700px;
+	padding: 60px 35px 35px 35px;
+	border-radius: 40px;
+	background: var(--bg-color);
+	transition: var(--transition-some);
+	box-shadow: 13px 13px 20px var(--dark-color),
+    -13px -13px 20px var(--light-color);
+	.link {
+		padding-top: 20px;
+		text-align: center;
+		a {
+			text-decoration: none;
+			color: var(--text-color);
+			opacity: 0.7;
+			font-size: 15px;
+		}
+	}
+}
+.card_logo {
+	background: url("src/assets/logo.png");
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-size: cover;
+	margin: 0 auto;
+	box-shadow: 0px 0px 0px 5px var(--bg-color),
+     8px 8px 15px var(--darker-color),
+     -8px -8px 15px var(--light-color);
+	transition: var(--transition-some);
+}
+.card_title {
+	text-align: center;
+	font-size: 28px;
+	padding-top: 24px;
+	letter-spacing: 0.5px;
+}
+.card_sub-title {
+	text-align: center;
+	font-size: 15px;
+	padding-top: 7px;
+	letter-spacing: 2px;
+	opacity: 0.75;
+}
+.card_form {
+	.fields {
+		width: 100%;
+		padding: 75px 5px 5px 5px;
+		input {
+			border: none;
+			outline: none;
+			background: none;
+			font-size: 18px;
+			color: var(--text-color);
+			padding: 20px 10px 20px 5px;
+		}
+		svg {
+			height: 22px;
+			margin: 0 10px -3px 25px;
+		}
+	}
+}
+.username,
+.password {
+	margin-bottom: 30px;
+	border-radius: 25px;
+	box-shadow: inset 8px 8px 8px var(--dark-color),
+    inset -8px -8px 8px var(--light-color);
+	transition: var(--transition-some);
+}
+.btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	height: 60px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+	color: var(--white-color);
+	text-align: center;
+	background: var(--violet-color);
+	background: linear-gradient(
+    to right bottom,
+    var(--pink-color),
+    var(--violet-color)
+  );
+	box-shadow: 5px 5px 10px var(--darker-color),
+    -5px -5px 10px var(--light-color);
+	transition: var(--transition-some);
+	&:hover {
+		background: var(--pink-color);
+		background: linear-gradient(
+    to right bottom,
+    var(--pink-color),
+    var(--pink-color)
+  );
+		box-shadow: 0px 0px 25px 5px rgba(255, 0, 170, 0.4);
+	}
+	&:active {
+		background: var(--pink-color);
+		background: linear-gradient(
+    to right bottom,
+    var(--violet-color),
+    var(--violet-color)
+  );
+		box-shadow: 0px 0px 25px 5px rgba(113, 8, 166, 0.4);
+	}
+}
+.toggle {
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	width: 150px;
+	height: 70px;
+	border-radius: 50px;
+	border: 0.1px solid var(--light-color);
+	background-color: var(--bg-color);
+	box-shadow: inset 10px 10px 15px var(--darker-color),
+    inset -10px -10px 15px var(--light-color);
+	label {
+		width: 70px;
+		height: 70px;
+		border-radius: 100px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+	}
+	input {
+		opacity: 0.3;
+		width: 150px;
+		height: 70px;
+		opacity: 0;
+		cursor: pointer;
+		&:checked {
+			& + label {
+				.toggle-icon {
+					transform: translateX(80px) rotate(360deg);
+				}
+				.icon {
+					&.moon {
+						opacity: 1;
+					}
+					&.sun {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.toggle-icon {
+	background-image: url("src/assets/sun.svg");
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	display: inline-block;
+	border-radius: 100px;
+	pointer-events: none;
+	position: relative;
+	transition: var(--transition-all);
+	box-shadow: 0px 0px 0px 3px var(--bg-color),
+     4px 4px 7px var(--darker-color),
+     -4px -4px 7px var(--light-color);
+	.icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: var(--transition-all);
+	}
+	.moon {
+		opacity: 0;
+	}
+}
