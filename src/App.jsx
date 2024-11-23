@@ -3,8 +3,8 @@ import './App.scss';
 import Card from './components/Card';
 import Mode from './components/Mode';
 import { ThemeMode } from './utlits/ThemeModeContext';
-import sun from  './src/assets/sun.svg';
-import moon from './src/assets/moon.svg';
+import sun from  '../src/assets/sun.svg';
+import moon from '../src/assets/moon.svg';
 function App() {
   const { nightMode ,setnightMode } = useContext(ThemeMode);
 
