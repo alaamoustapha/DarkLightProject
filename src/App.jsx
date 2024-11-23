@@ -3,7 +3,8 @@ import './App.scss';
 import Card from './components/Card';
 import Mode from './components/Mode';
 import { ThemeMode } from './utlits/ThemeModeContext';
-
+import sun from  './src/assets/sun.svg';
+import moon from './src/assets/moon.svg';
 function App() {
   const { nightMode ,setnightMode } = useContext(ThemeMode);
 
@@ -81,8 +82,8 @@ function App() {
 <input type="checkbox" id="toggleBtn" />
 <label htmlFor="toggleBtn" >
   <span className="toggle-icon">
-    <img src="src/assets/sun.svg"  alt="sun icon" className="icon sun" />
-    <img src="src/assets/moon.svg" alt="moon icon" className="icon moon" />
+    <img src={sun} alt="sun icon" className="icon sun" />
+    <img src={moon} alt="moon icon" className="icon moon" />
   </span>
 </label>
 </div>
